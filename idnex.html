@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .container {
+            border: 1px solid black;
+            /* padding: 10px; */
+            height: 600px;
+            width: 1000px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .container > div {
+            border: 1px solid black;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width:45%;
+            height: 45%;
+        }
+
+        p {
+            text-align: center;
+        }
+        /* ---loader styles--- */
+        .loaded {
+            display: block;
+        }
+        .loading {
+            display: none;            
+        }
+        .loader {
+            width: 100vw;
+            height: 100vh;
+            background-color: #c8bbab;
+            background: url('asfalt-light.png') ,#c8bbab;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #sunflower {
+            animation: spin 3s linear infinite;
+        }
+        @keyframes spin {
+            100% {transform: rotate(360deg);}
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const container = document.querySelector('.container');
+            const loader = document.querySelector('.loader');
+            container.classList.toggle('loading');
+            loader.classList.toggle('loading');
+            loader.classList.toggle('loader');
+        }
+    </script>
+</head>
+
+<body class="">
+    <div class="loader">
+        <img src="sunflower.png" alt="sunflower" id="sunflower">
+    </div>
+    <div class="container loading">
+        <div class="box1">
+            <p>dummy text</p>
+            <img src="https://picsum.photos/200" alt="photo">
+        </div>
+        <div class="box2">
+            <p>dummy text</p>
+            <img src="https://picsum.photos/200" alt="photo">
+        </div>
+        <div class="box3">
+            <p>dummy text</p>
+            <img src="https://picsum.photos/200" alt="photo">
+        </div>
+        <div class="box4">
+            <p>dummy text</p>
+            <img src="https://picsum.photos/200" alt="photo">
+        </div>
+    </div>
+
+</body>
+
+</html>
